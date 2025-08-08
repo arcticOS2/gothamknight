@@ -149,7 +149,7 @@
 
   /* Project Cards */
   .project-card {
-    @apply card-batman group cursor-pointer overflow-hidden;
+    @apply card-batman cursor-pointer overflow-hidden;
   }
 
   .project-card::before {
