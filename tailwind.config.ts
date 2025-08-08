@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'montserrat': ['Montserrat', 'sans-serif'],
+				'inter': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,16 +56,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// Batman Theme Colors
+				'gotham-dark': 'hsl(var(--gotham-dark))',
+				'gotham-charcoal': 'hsl(var(--gotham-charcoal))',
+				'gotham-gray': 'hsl(var(--gotham-gray))',
+				'gotham-light-gray': 'hsl(var(--gotham-light-gray))',
+				'batman-gold': 'hsl(var(--batman-gold))',
+				'batman-gold-dark': 'hsl(var(--batman-gold-dark))',
+				'gotham-accent': 'hsl(var(--gotham-accent))',
+				'text-primary': 'hsl(var(--text-primary))',
+				'text-secondary': 'hsl(var(--text-secondary))',
+				'text-muted': 'hsl(var(--text-muted))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

@@ -2,95 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Batman-themed Portfolio Design System - All colors MUST be HSL */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Batman Color Palette */
+    --gotham-dark: 210 12% 4%;
+    --gotham-charcoal: 210 8% 8%; 
+    --gotham-gray: 210 6% 15%;
+    --gotham-light-gray: 210 4% 25%;
+    --batman-gold: 45 85% 55%;
+    --batman-gold-dark: 45 75% 45%;
+    --gotham-accent: 210 4% 35%;
+    --text-primary: 0 0% 95%;
+    --text-secondary: 210 4% 70%;
+    --text-muted: 210 4% 50%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Component Colors */
+    --background: var(--gotham-dark);
+    --foreground: var(--text-primary);
+    --card: var(--gotham-charcoal);
+    --card-foreground: var(--text-primary);
+    --popover: var(--gotham-charcoal);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--batman-gold);
+    --primary-foreground: var(--gotham-dark);
+    --secondary: var(--gotham-gray);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--gotham-gray);
+    --muted-foreground: var(--text-muted);
+    --accent: var(--batman-gold);
+    --accent-foreground: var(--gotham-dark);
+    --destructive: 0 75% 55%;
+    --destructive-foreground: var(--text-primary);
+    --border: var(--gotham-gray);
+    --input: var(--gotham-gray);
+    --ring: var(--batman-gold);
+    --radius: 0.75rem;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Batman-specific Design Tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--gotham-dark)), hsl(var(--gotham-charcoal)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--gotham-charcoal)), hsl(var(--gotham-gray) / 0.5));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--batman-gold)), hsl(var(--batman-gold-dark)));
+    --shadow-batman: 0 10px 30px -5px hsl(var(--batman-gold) / 0.1);
+    --shadow-card: 0 8px 25px -8px hsl(var(--gotham-dark) / 0.4);
+    --shadow-glow: 0 0 40px hsl(var(--batman-gold) / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 }
 
@@ -100,6 +59,155 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter overflow-x-hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Batman Typography */
+  .text-hero {
+    @apply text-6xl md:text-8xl font-montserrat font-black tracking-tight;
+  }
+  
+  .text-section-title {
+    @apply text-4xl md:text-5xl font-montserrat font-bold tracking-wide;
+  }
+  
+  .text-subsection {
+    @apply text-2xl md:text-3xl font-montserrat font-semibold;
+  }
+
+  /* Batman Buttons */
+  .btn-batman {
+    @apply bg-gradient-to-r from-batman-gold to-batman-gold-dark text-gotham-dark 
+           px-8 py-4 rounded-lg font-montserrat font-semibold tracking-wide
+           transition-all duration-300 hover:shadow-glow hover:scale-105
+           focus:outline-none focus:ring-2 focus:ring-batman-gold focus:ring-opacity-50;
+  }
+  
+  .btn-batman-outline {
+    @apply border-2 border-batman-gold text-batman-gold bg-transparent
+           px-8 py-4 rounded-lg font-montserrat font-semibold tracking-wide
+           transition-all duration-300 hover:bg-batman-gold hover:text-gotham-dark
+           hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-batman-gold;
+  }
+
+  /* Batman Cards */
+  .card-batman {
+    @apply bg-gradient-to-br from-gotham-charcoal to-gotham-gray/50
+           border border-gotham-gray rounded-xl p-6
+           shadow-card backdrop-blur-sm
+           transition-all duration-300 hover:shadow-batman hover:scale-105
+           hover:border-batman-gold/30;
+  }
+
+  /* Batman Navigation */
+  .nav-batman {
+    @apply fixed top-0 left-0 right-0 z-50 bg-gotham-dark/95 backdrop-blur-md
+           border-b border-gotham-gray/30;
+  }
+
+  /* Batman Animations */
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Batman Hero Background */
+  .hero-background {
+    background: linear-gradient(135deg, hsl(var(--gotham-dark)) 0%, hsl(var(--gotham-charcoal)) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 20%, hsl(var(--batman-gold) / 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Skill Icons Hover */
+  .skill-icon {
+    @apply w-16 h-16 bg-gradient-to-br from-gotham-gray to-gotham-charcoal
+           rounded-xl flex items-center justify-center text-batman-gold
+           transition-all duration-300 hover:shadow-glow hover:scale-110
+           hover:bg-gradient-to-br hover:from-batman-gold hover:to-batman-gold-dark
+           hover:text-gotham-dark;
+  }
+
+  /* Project Cards */
+  .project-card {
+    @apply card-batman group cursor-pointer overflow-hidden;
+  }
+
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(var(--batman-gold) / 0.1), transparent);
+    transition: left 0.5s;
+  }
+
+  .project-card:hover::before {
+    left: 100%;
+  }
+}
+
+@layer utilities {
+  .text-batman-gold {
+    color: hsl(var(--batman-gold));
+  }
+  
+  .text-gotham-dark {
+    color: hsl(var(--gotham-dark));
+  }
+  
+  .bg-gotham-dark {
+    background-color: hsl(var(--gotham-dark));
+  }
+  
+  .bg-gotham-charcoal {
+    background-color: hsl(var(--gotham-charcoal));
+  }
+  
+  .bg-batman-gold {
+    background-color: hsl(var(--batman-gold));
+  }
+  
+  .border-batman-gold {
+    border-color: hsl(var(--batman-gold));
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px hsl(var(--batman-gold) / 0.5), 0 0 20px hsl(var(--batman-gold) / 0.3);
+  }
+  to {
+    text-shadow: 0 0 20px hsl(var(--batman-gold) / 0.8), 0 0 30px hsl(var(--batman-gold) / 0.5);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
