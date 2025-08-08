@@ -12,7 +12,7 @@ const AboutSection = () => {
       degree: "B.Sc. (Hons.) Statistics",
       institution: "St. Xavier's College, Kolkata",
       year: "2023",
-      achievement: "Graduated with honors in Statistics"
+      achievement: "Graduated with honors in Statistics, IIT JAM AIR 30"
     },
     {
       degree: "Higher Secondary (12th)",
@@ -22,9 +22,9 @@ const AboutSection = () => {
     },
     {
       degree: "Secondary (10th)",
-      institution: "Marokhana High School",
+      institution: "Marokhana High School", 
       year: "2018",
-      achievement: "Top 1% rank, IIT JAM AIR 30"
+      achievement: "Top 1% rank in state board"
     }
   ];
 

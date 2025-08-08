@@ -9,7 +9,7 @@ const PortfolioSection = () => {
       tech: ['Python', 'Scikit-Learn', 'Pandas', 'Matplotlib'],
       metrics: ['R² Score: 87%', 'RMSE: 12.5%', 'Feature Engineering: 15+ variables'],
       icon: '🎬',
-      github: 'https://github.com/arcticOS2/cinema-prediction'
+      github: 'https://github.com/arcticOS2/Cinema-Ticket-Sale-Prediction-using-Linear-Regression'
     },
     {
       title: 'Amazon Stock Price Forecasting',
@@ -17,7 +17,7 @@ const PortfolioSection = () => {
       tech: ['R', 'Time Series', 'ARIMA', 'ARIMAX'],
       metrics: ['Accuracy: 91%', 'MAE: 2.8%', 'Forecast Horizon: 30 days'],
       icon: '📈',
-      github: 'https://github.com/arcticOS2/amazon-stock-forecast'
+      github: 'https://github.com/arcticOS2/Time-Series-Project-Forecasting-Amazon-Stock-Prices'
     },
     {
       title: 'Google Play Store Apps Analysis',
@@ -25,7 +25,7 @@ const PortfolioSection = () => {
       tech: ['R', 'Shiny', 'ggplot2', 'Data Mining'],
       metrics: ['10,000+ Apps Analyzed', 'UX Improvement: 60%', 'Interactive Dashboard'],
       icon: '📱',
-      github: 'https://github.com/arcticOS2/playstore-analysis'
+      github: 'https://github.com/dootika/mth-208-course-project-group-16'
     },
     {
       title: 'Movie Verdict Detector',
@@ -33,7 +33,23 @@ const PortfolioSection = () => {
       tech: ['Python', 'NLP', 'TensorFlow', 'Power BI'],
       metrics: ['Accuracy: 92%', 'F1-Score: 0.89', 'Power BI Dashboard'],
       icon: '🎭',
-      github: 'https://github.com/arcticOS2/movie-sentiment'
+      github: 'https://github.com/arcticOS2/Classification-Project-Movie-Verdict-Detector'
+    },
+    {
+      title: 'Prediction of Car Price using MLR',
+      description: 'Developed multiple linear regression models to predict car prices based on various features, achieving high accuracy for automotive market analysis.',
+      tech: ['Python', 'Scikit-Learn', 'Multiple Linear Regression', 'Feature Selection'],
+      metrics: ['R² Score: 85%', 'MAE: 8.2%', 'Feature Analysis: 20+ variables'],
+      icon: '🚗',
+      github: 'https://github.com/arcticOS2/Prediction-of-Car-Price-Using-Multiple-Linear-Regression'
+    },
+    {
+      title: 'Credit Card Fraud Detection',
+      description: 'Implemented machine learning algorithms to detect fraudulent credit card transactions with high precision, protecting financial institutions from losses.',
+      tech: ['Python', 'Machine Learning', 'Anomaly Detection', 'Classification'],
+      metrics: ['Accuracy: 99.2%', 'Precision: 96%', 'Recall: 94%'],
+      icon: '💳',
+      github: 'https://github.com/arcticOS2/Credit-Card-Fraud-Detection-Using-ML'
     }
   ];
 
@@ -48,7 +64,7 @@ const PortfolioSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="project-card relative p-8 h-full group">
               <div className="space-y-6">
